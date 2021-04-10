@@ -1,0 +1,5 @@
+/data/dureader_checklist.dataset.tar.gz
+/data/dureader_checklist.demo.tar.gz
+/data/dureader_checklist.finetuned_model.tar.gz
+/data/dureader_checklist.test1.tar.gz
+*.pkl
