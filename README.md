@@ -37,7 +37,10 @@ python predict.py
 # 实验结果
 用的baseline模型是base版MacBERT(具体请看https://github.com/ymcui/MacBERT)
 
+![image-20210410231128986](https://raw.githubusercontent.com/zhoujx4/PicGo/main/img/image-20210410231128986.png)
+
 # 后续优化策略
+
 - 更多的数据
 - 更细粒度的数据增强
 - 模型结构的优化
