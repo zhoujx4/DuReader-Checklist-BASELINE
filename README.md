@@ -13,7 +13,7 @@
 ```
 python run.py
 --max_len=256
---model_name_or_path=/data/zhoujx/prev_trained_model/chinese-macbert-base
+--model_name_or_path=下载的预训练模型路径
 --per_gpu_train_batch_size=7
 --per_gpu_eval_batch_size=40
 --learning_rate=1e-5
