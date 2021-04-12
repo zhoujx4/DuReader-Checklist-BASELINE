@@ -7,7 +7,6 @@
 - python=3.6
 - torch=1.7
 - transformers=4.5.0
-- 3080显卡一块 10G显存
 
 # 训练示例
 训练  
@@ -40,7 +39,7 @@ python predict.py
 ![image-20210410231128986](https://raw.githubusercontent.com/zhoujx4/PicGo/main/img/image-20210410231128986.png)
 
 # 后续优化策略
-
+- 数据清洗，据官方工作人员讲解到，训练集的准确率只能确保92%以上
 - 更多的数据
 - 更细粒度的数据增强
 - 模型结构的优化
