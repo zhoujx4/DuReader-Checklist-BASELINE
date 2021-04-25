@@ -91,14 +91,14 @@ def train(args, train_iter, model):
             batch["all_end_positions"],
             batch["all_answerable_label"]
         ))
-        loss.backward(retain_graph=True)
+        loss.backward()
         # 对抗训练
         fgm.attack()  # 在embedding上添加对抗扰动
-        predictions_adv = model(
+        logits_adv = model(
             input_ids=batch['all_input_ids'],
             attention_mask=batch['all_attention_mask'],
             token_type_ids=batch['all_token_type_ids'])
-        loss_adv, mrc_loss, cls_loss = criterion(logits, (
+        loss_adv, mrc_loss, cls_loss = criterion(logits_adv, (
             batch["all_start_positions"],
             batch["all_end_positions"],
             batch["all_answerable_label"]

@@ -20,8 +20,8 @@ class MRC_model(nn.Module):
         sequence_output, pooled_output = output[0], output[1]
         logits = self.classifier(sequence_output)
         start_logits, end_logits = logits.chunk(2, dim=-1)
-        start_logits = start_logits.squeeze()
-        end_logits = end_logits.squeeze()
+        start_logits = start_logits.squeeze(dim=-1)
+        end_logits = end_logits.squeeze(dim=-1)
         cls_logits = self.classifier_cls(pooled_output)
 
         return start_logits, end_logits, cls_logits
